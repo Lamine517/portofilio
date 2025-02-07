@@ -9,9 +9,9 @@
   </head>
   <body class="bg-gray-900 text-white font-sans relative">
     <div class="floating-bg"></div>
-  <header class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-      <div class="flex items-center space-x-2">
-       <img src="assets/icons/design-nib-solid.svg" alt="">
+  <header class="p-6 flex justify-between items-center max-w-6xl mx-auto header-top">
+      <div class="flex items-center space-x-2 logo">
+       <img lo aloading="lazy" src="assets/icons/design-nib-solid.svg" alt="">
         <span class="text-lg font-semibold">Lamine Dieme</span>
       </div>
       <div class="socials">
@@ -109,7 +109,7 @@
       </div>
     </header>
     
-    <main class="flex flex-col md:flex-row items-center text-center md:text-left px-6 mt-12 max-w-6xl mx-auto fade-in gap-6">
+    <main class="flex flex-col md:flex-row items-center text-center md:text-left px-6 mt-12 max-w-6xl mx-auto fade-in gap-12">
       <div class="flex-1">
         <h1 id="animated-h1" class="text-green-400 text-xl font-semibold"></h1>
         <h2 id="animated-h2" class="text-6xl font-extrabold mt-2 leading-tight"></h2>
@@ -120,31 +120,31 @@
 
             <div class="flex justify-center md:justify-start space-x-6 mt-10 mb-10">
       <div class="icon-container relative inline-block">
-        <img src="/assets/icons/html.svg" alt="HTML">
+        <img loading="lazy" src="/assets/icons/html.svg" alt="HTML">
         <span class="tooltip">HTML</span>
       </div>
       <div class="icon-container relative inline-block">
-        <img src="/assets/icons/css.svg" alt="CSS">
+        <img loading="lazy" src="/assets/icons/css.svg" alt="CSS">
         <span class="tooltip">CSS</span>
       </div>
       <div class="icon-container relative inline-block">
-        <img src="/assets/icons/js.svg" alt="JavaScript">
+        <img loading="lazy" src="/assets/icons/js.svg" alt="JavaScript">
         <span class="tooltip">JavaScript</span>
       </div>
       <div class="icon-container relative inline-block">
-        <img src="/assets/icons/bootstrap.svg" alt="Bootstrap">
+        <img loading="lazy" src="/assets/icons/bootstrap.svg" alt="Bootstrap">
         <span class="tooltip">Bootstrap</span>
       </div>
       <div class="icon-container relative inline-block">
-        <img src="/assets/icons/tailwindcss.svg" alt="TailwindCSS">
+        <img loading="lazy" src="/assets/icons/tailwindcss.svg" alt="TailwindCSS">
         <span class="tooltip">TailwindCSS</span>
       </div>
        <div class="icon-container relative inline-block">
-        <img src="/assets/icons/angular.svg" alt="Angular">
+        <img loading="lazy" src="/assets/icons/angular.svg" alt="Angular">
         <span class="tooltip">Angular</span>
       </div>
       <div class="icon-container relative inline-block">
-        <img src="/assets/icons/figma.svg" alt="Figma">
+        <img loading="lazy" src="/assets/icons/figma.svg" alt="Figma">
         <span class="tooltip">Figma</span>
       </div>
     </div>
@@ -158,7 +158,7 @@
 
       </div>
         <div class="flex-1 flex justify-center">
-        <img
+        <img loading="lazy"
           src="/assets/images/my-profil.png"
           alt="Lamine Dieme"
           class="w-80 my-profile"
@@ -180,28 +180,8 @@
     </section>
   
     
-    <script>
-    function animateText(id, text, delay) {
-        let i = 0;
-        let element = document.getElementById(id);
-        element.textContent = "";
-        function typeWriter() {
-          if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, delay);
-          }
-        }
-        typeWriter();
-      }
-      
-      window.onload = function() {
-        animateText("animated-h1", "Hello, Je suis<span/>", 100);
-        animateText("animated-h2", "Lamine Dieme", 150);
-        animateText("animated-h3", "Web Designer & Développeur Front-end </>", 100);
-        animateText("animated-p4", "           Avec 3 ans d'expérience en UI/UX et développement web, je conçois des interfaces dynamiques et intuitives, alliant design et performance. Mon but : offrir des expériences fluides, innovantes et centrées sur l'utilisateur.", 50);
-      };
-    </script>
+    <script async>
+   function animateText(e,t,n){let i=0,a=document.getElementById(e);a.textContent="",!function e(){i<t.length&&(a.textContent+=t.charAt(i),i++,setTimeout(e,n))}()}window.onload=function(){animateText("animated-h1","Hello, Je suis<span/>",100),animateText("animated-h2","Lamine Dieme",150),animateText("animated-h3","Web Designer & D\xe9veloppeur Front-end </>",100),animateText("animated-p4","           Avec 3 ans d'exp\xe9rience en UI/UX et d\xe9veloppement web, je con\xe7ois des interfaces dynamiques et intuitives, alliant design et performance. Mon but : offrir des exp\xe9riences fluides, innovantes et centr\xe9es sur l'utilisateur.",50)};
     </script>
   </body>
 </html>

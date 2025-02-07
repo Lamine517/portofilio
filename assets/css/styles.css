@@ -139,3 +139,17 @@ body {
     transform: scale(1.1) translateY(10px);
     filter: brightness(.9) contrast(1.2) saturate(1.5)
 }
+
+@media (max-width: 576px) {
+    .header-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .header-top .logo {
+        display: none;
+    }
+}
