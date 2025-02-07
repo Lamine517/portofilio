@@ -1,137 +1,141 @@
- body {
-     font-family: 'Inter', sans-serif;
-     box-sizing: border-box;
- }
+.icon-container img,
+.socials svg {
+    object-fit: contain;
+    cursor: pointer
+}
 
- @keyframes fadeIn {
-     from {
-         opacity: 0;
-         transform: translateY(10px);
-     }
+body {
+    font-family: Inter, sans-serif;
+    box-sizing: border-box
+}
 
-     to {
-         opacity: 1;
-         transform: translateY(0);
-     }
- }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px)
+    }
 
- @keyframes floatAnimation {
-     0% {
-         transform: translateY(0);
-     }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
 
-     50% {
-         transform: translateY(20px);
-     }
+@keyframes floatAnimation {
 
-     100% {
-         transform: translateY(0);
-     }
- }
+    0%,
+    100% {
+        transform: translateY(0)
+    }
 
- @keyframes pulseEffect {
-     0% {
-         transform: scale(1);
-     }
+    50% {
+        transform: translateY(20px)
+    }
+}
 
-     50% {
-         transform: scale(1.05);
-     }
+@keyframes pulseEffect {
 
-     100% {
-         transform: scale(1);
-     }
- }
+    0%,
+    100% {
+        transform: scale(1)
+    }
 
- .icon-container img {
-     width: 32px;
-     height: 32px;
-     object-fit: contain;
-     transition: all .3s ease-in-out;
-     cursor: pointer;
- }
+    50% {
+        transform: scale(1.05)
+    }
+}
 
- .icon-container img:hover {
-     transform: scale(1.2);
- }
+.icon-container img {
+    width: 32px;
+    height: 32px;
+    transition: .3s ease-in-out
+}
 
- .fade-in {
-     animation: fadeIn 0.8s ease-in-out;
- }
+.icon-container img:hover {
+    transform: scale(1.2)
+}
 
- .tooltip {
-     visibility: hidden;
-     background-color: black;
-     color: white;
-     text-align: center;
-     padding: 5px;
-     border-radius: 5px;
-     position: absolute;
-     z-index: 1;
-     bottom: 125%;
-     left: 50%;
-     transform: translateX(-50%);
-     opacity: 0;
-     transition: opacity 0.3s;
- }
+.fade-in {
+    animation: .8s ease-in-out fadeIn
+}
 
- .icon-container:hover .tooltip {
-     visibility: visible;
-     opacity: 1;
- }
+.tooltip {
+    visibility: hidden;
+    background-color: #fff;
+    color: #111827;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity .3s
+}
 
- .floating-bg {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: url('/assets/images/mask.png') no-repeat center center/cover;
-     opacity: 0.3;
-     animation: floatAnimation 5s infinite ease-in-out;
-     z-index: -1;
- }
+.btn-animated,
+.socials svg {
+    transition: .3s ease-in-out
+}
 
- .socials {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 16px;
- }
+.icon-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1
+}
 
- .socials svg {
-     background-color: rgba(255, 255, 255, 1);
-     border-radius: 50%;
-     padding: 4px;
-     color: #111827;
-     width: 36px;
-     height: 36px;
-     object-fit: contain;
-     cursor: pointer;
-     transition: all 0.3s ease-in-out;
- }
+.floating-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/images/mask.png') center center/cover no-repeat fixed;
+    opacity: .3;
+    animation: 5s ease-in-out infinite floatAnimation;
+    z-index: -1
+}
 
- .socials svg:hover {
-     transform: scale(1.1);
-     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3)
- }
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px
+}
 
- .btn-animated {
-     transition: all 0.3s ease-in-out;
-     animation: pulseEffect 2s infinite;
- }
+.socials svg {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 4px;
+    color: #111827;
+    width: 36px;
+    height: 36px
+}
 
- .btn-animated:hover {
-     transform: scale(1.1);
-     background-color: #f0f0f0;
- }
+.socials svg:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, .3)
+}
 
- .my-profile {
-     cursor: pointer;
-     transition: transform 0.4s ease, filter 0.4s ease;
- }
+.btn-animated {
+    background-color: #fff;
+    padding: 12px 16px;
+    margin-top: 20px;
+    animation: 2s infinite pulseEffect
+}
 
- .my-profile:hover {
-     transform: scale(1.1) translateY(10px);
-     filter: brightness(0.9) contrast(1.2) saturate(1.5);
- }
+.btn-animated:hover {
+    transform: scale(1.2);
+    background-color: #f0f0f0ca
+}
+
+.my-profile {
+    cursor: pointer;
+    transition: transform .4s, filter .4s
+}
+
+.my-profile:hover {
+    transform: scale(1.1) translateY(10px);
+    filter: brightness(.9) contrast(1.2) saturate(1.5)
+}
